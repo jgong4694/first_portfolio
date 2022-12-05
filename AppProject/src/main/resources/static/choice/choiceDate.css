@@ -1,0 +1,115 @@
+.back_button{
+    background-color: gainsboro;
+    width: 70px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.back_button>a{
+    color: gray;
+}
+.choiceImage
+{
+    margin-top: 50px;
+    width: 100%;
+    height: 202px;
+    position: relative;
+}
+.imgFile{
+    width: 80%;
+    height: 200px;
+    border: 2px solid black;
+    margin: 0 auto; 
+    border-radius: 8px;
+    background-size: 100%;
+    position: relative;
+}
+.imageText{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    padding-top: 5px;
+    font-size: 17px;
+    z-index: 100;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.workBox{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+.workText{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    display:inline-block;
+    padding: 3px 10px 3px 10px;
+    margin-top: 10px;
+}
+.dateChoice{
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+}
+.pickerBox{
+    margin: 20% 30% auto;
+    width: 100%;
+    height: 100px;
+
+}
+#datepicker{
+    margin: 0 auto;
+    height: 30px;
+    font-size: 17px;
+    width: 140px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+#datepicker:hover{
+    border: 3px solid rgb(0,86,145);
+}
+.textpicker{
+    margin-left: 6%;
+}
+
+.inputDate{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: rgb(0,86,145);
+    border-radius: 7px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 auto;
+}
+.inputDate:hover{
+    background-color: white;
+    border: 2px solid rgb(0,86,145);
+    color: rgb(0,86,145);
+}
+.inputDateBox{
+    margin: 10% 36% auto;
+    width: 100%;
+    height: 50px;
+}
+#img1{
+	background-image: url(../strong.jpg)
+}
+#img2{
+	background-image: url(../wendler2.jpg)
+}
+#img3{
+	background-image: url(../texas.jpg)
+}

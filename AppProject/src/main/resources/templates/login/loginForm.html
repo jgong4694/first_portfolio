@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="login/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <button class="back_button">
+                <a href="/">돌아가기</a>
+            </button>
+        </div>
+        <div class="login_main">
+            <div class="login_box">
+                <div class="login_title">Log-In</div>
+                <div>
+                    <form action="/" th:action="@{/login}" method="POST">
+                        <div class="id_box">
+                            <input type="text" placeholder="Username" id="id" name="id">
+                        </div>
+                        <div class="pwd_box">
+                            <input type="password" placeholder="*******" id="password" name="password">
+                        </div>
+                        <hr>
+                        <button type="submit" class="login_button">로그인</button>
+                        <a class="newuser_button" th:href="@{/login/newuser}">회원가입</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

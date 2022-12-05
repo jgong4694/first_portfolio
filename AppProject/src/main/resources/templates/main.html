@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="main.css">
+    <title>운동도우미</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- wrap -->
+        <section class="base_menu">
+            <!-- base_menu -->
+            <div class="font_burger">
+                <i class="fas fa-bars" id="burger"></i>
+            </div>
+            <h3><a href="/">운동도우미</a></i></h3>
+        </section><!-- base_menu end -->
+        <section class="hiding_menu" id="side_menu">
+            <div class="burger_title">
+                <span>운동도우미</span>
+                <i class="far fa-times" id="out_burger"></i>
+            </div>
+            <div class="hiding_side">
+                <ul>
+                    <li><a th:href="@{/choice}">운동법 선택</a></li>
+                </ul>
+                <ul>
+                    <li><a th:href="@{/mypage}">마이페이지</a></li>
+                </ul>
+                <ul>
+                    <li><a th:href="@{/board}">자유게시판</a></li>
+                </ul>
+                <ul>
+                <th:block sec:authorize="isAnonymous()">
+        				<li><a th:href="@{/login}">로그인</a></li>
+    				</th:block>
+    				<th:block sec:authorize="isAuthenticated()">
+				<li><a th:href="@{/logout}">로그아웃</a></li>
+    				</th:block>
+				</ul>
+            </div>
+        </section>
+        <section class="main_menu">
+            <div class="slick">
+                <div>
+                    <img src="./strong.jpg" alt="strong_lift">
+                </div>
+                <div>
+                    <img src="wendler2.jpg" alt="wendler_531">
+                </div>
+                <div>
+                    <img src="texas.jpg" alt="texas_method">
+                </div>
+            </div>
+            <button class="choice" th:href="@{/choice}">
+                <div>운동법 선택</div>
+            </button>
+        </section>
+    </div>
+    </div> <!-- wrap end -->
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slick').slick({  
+            rows:1,
+            dots: false,
+            Infinity:true,
+            arrows:false,
+            autoplay:true,
+            autoplaySpeed:2500,
+            pauseOnFocus: false,  //마우스 포커스 시 슬라이드 멈춤 -default:true
+    pauseOnHover: false,  //마우스 호버 시 슬라이드 멈춤 -default:true
+    pauseOnDotsHover: false,  //네이게이션버튼 호버 시 슬라이드 멈춤 -default:false
+        });
+    });
+</script>
+<script>
+    function click_burger() {
+        document.getElementById('side_menu').className = 'hiding_menuon'
+    }
+    function click_burger2(){
+        document.getElementsByClassName('slick').className ='slick-off'
+    }
+    let burger = document.getElementById('burger');
+    burger.addEventListener("click", function () {
+        click_burger();
+        click_burger2()
+    })
+</script>
+<script>
+    function click_out_burger() {
+        document.getElementById('side_menu').className = 'hiding_menu'
+    }
+    let button = document.getElementById('out_burger');
+    out_burger.addEventListener("click", function () {
+        click_out_burger();
+    })
+</script>
+<script>
+
+</script>
+
+</html>

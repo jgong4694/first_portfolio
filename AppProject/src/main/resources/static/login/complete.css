@@ -1,0 +1,36 @@
+
+.back_button>a{
+    color: gray;
+}
+
+
+.wrap{
+    background-color: rgba(0,0,0, 0.5);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.complete_box{
+    background-color: white;
+    width: 270px;
+    height: 200px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px black;
+    display: inline-block;
+    margin: 50% 12% auto;
+}
+.complete_text{
+    margin-top: 30%;
+    padding-bottom: 15%;
+}
+
+.ok_button{
+
+    color: gray;
+}
+
+.ok_button:hover{
+    transition: 0.3s;
+    color: rgb(0,86,145);
+}

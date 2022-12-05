@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="/board/base.css">
+    <link rel="stylesheet" href="/board/boardInside.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <button class="back_button"><a th:href="@{/board}">< 돌아가기</a></button>
+        </div>
+        <div class="add_main">
+            <div class="login_box">
+                    <div class="id_title" th:text="${question.human.id}">아이디</div>
+                <div>
+                    <form action="">
+                        <div class="title_box">
+                            <div id="title"th:text="${question.title}">제목</div>
+                        </div>
+                        <div class="content_box">
+                            <div id="content" th:text="${question.content}">내용내용</div>
+                        </div>
+                    </form>
+                       <hr id="line">
+                                <div id="Answer">
+                                    <div>
+                                        <ul th:each="answers: ${Answer}">
+                                        	<li th:text="|${(answers.human.id) + ' : ' + (answers.content)}|"></li>
+                                        </ul>
+                                    </div>
+                                <form id="AnswerForm" th:action="@{|/answer/create/${question.questionNum}|}" method="post" th:method="POST">
+                                    <div>
+                                        <textarea name="content" id="AnswerText" cols="30" rows="1"></textarea>
+                                        <div>                                        
+                                        <button class="AnswerInput">답변 등록</button>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

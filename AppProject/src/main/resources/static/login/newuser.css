@@ -1,0 +1,121 @@
+.back_button{
+    background-color: gainsboro;
+    width: 70px;
+    height: 35px;
+    padding: 4px 6px 4px 6px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.back_button>a{
+
+    color: gray;
+}
+
+
+.wrap{
+    background-color: rgba(0,0,0, 0.5);
+    width: 100%;
+}
+
+
+.login_main{
+    background-color: white;
+    width: 270px;
+    height: 438px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 17%;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px black;
+    display: inline-block;
+    margin: 18% 11.5% auto;
+}
+.login_box{
+    padding-top: 5px;
+}
+
+.login_title{
+    width: 120px;
+    background-color: rgb(0,86,145);
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 0 auto;
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: 10%;
+}
+
+
+.id_box{
+    margin-bottom: 10px;
+}
+
+.pwd_box1{
+    margin-bottom: 10px;
+}
+
+.pwd_box2{
+    margin-bottom: 10px;
+}
+
+.email_box{
+    margin-bottom: 25px;
+}
+
+
+#id{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0,86,145);
+}
+#pwd{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0,86,145); 
+}
+
+
+#pwd_check{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0,86,145); 
+}
+
+#email{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0,86,145); 
+}
+
+.newuser_button{
+    width: 70px;
+    height: 30px;
+    margin-top: 13px;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    color: gray;
+    cursor: pointer;
+}
+.newuser_button:hover{
+    color: rgb(0,86,145);
+    transition: 0.2s;
+    background-color: white;
+    border: 2px solid rgb(0,86,145);
+}
+
+label{
+    text-align: left;
+    display: block;
+    margin-left: 17%;
+    font-size: 12px;
+    color: darkgray;
+}
+.error{
+    text-align: left;
+    margin-left: 16%;
+    color: red;
+    font-size: 8px;
+    opacity: 0;
+}

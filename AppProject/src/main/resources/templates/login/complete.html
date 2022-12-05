@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="complete.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+    	<form>
+        <div class="complete_box">
+            <div class="complete_text">회원가입 완료</div>
+           <a class="ok_button" th:href="@{/login}">완료</a>
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>

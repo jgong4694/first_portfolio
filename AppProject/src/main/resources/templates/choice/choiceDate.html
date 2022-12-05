@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="/choice/choiceDate.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <button class="back_button"><a href="../">
+                    < 돌아가기</a> </button> </div> <form action="">
+                        <section class="choiceImage">
+                            <div class="imgFile" th:id="'img' + *{value}"></div>
+                            <div class="workBox">
+                                <div class="workText" th:id="'timeText' + *{value}">분할법이야기</div>
+                            </div>
+                            <div class="imageText" th:id="'name' + *{value}">분할이름</div>
+                        </section>
+                        <section class="dateChoice">
+                            <div class="pickerBox">
+                                <div class="textpicker">시작 날짜 선택</div>
+                                <input id="datepicker" name="Date"></div>
+        </section>
+        <div class="inputDateBox">
+            <button class="inputDate">선택 완료</button>
+        </div>
+        </form>
+    </div>
+</body>
+<script>
+
+</script>
+<script>
+    $(function () {
+        $('#datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            showMonthAfterYear: true,
+            changeYear: true,
+            changeMonth: true,
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월',
+                '12월'],
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+        });
+        $('#datepicker').datepicker('setDate', 'today');
+    })
+</script>
+
+</html>

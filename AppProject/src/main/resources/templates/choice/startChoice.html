@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="/choice/choice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <title>커뮤니티</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="back_button">
+            <a href="">
+                < 돌아가기</a> </div> 
+                <form action="choiceDate" th:action="@{choice/choiceDate}">
+                    <section class="choiceMain">
+                        <div class="title">
+                            <div class="titleText">
+                                스트롱 리프트 - 초급자
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <img src="./strong.jpg" alt="strong_lift">
+                            </div>
+                            <div>
+                                <img src="wendler2.jpg" alt="wendler_531">
+                            </div>
+                            <div>
+                                <img src="texas.jpg" alt="texas_method">
+                            </div>
+                        </div>
+                    </section>
+                    <hr>
+                    <section class="content">
+                        <div>
+                            <div class="workout workout1">
+                                <div class="workimg workimg1"></div>
+                                <div class="workText workText1">벤치프레스</div>
+                            </div>
+                            <div class="workout workout2">
+                                <div class="workimg workimg2"></div>
+                                <div class="workText workText2">스쿼트</div>
+                            </div>
+                            <div class="workout workout3">
+                                <div class="workimg workimg3"></div>
+                                <div class="workText workText3">데드리프트</div>
+                            </div>
+                            <div class="workout workout4">
+                                <div class="workimg workimg4"></div>
+                                <div class="workText workText4">오버헤드프레스</div>
+                            </div>
+                            <div class="workout workout5">
+                                <div class="workimg workimg5">
+                                </div>
+                                <div class="workText workText5">바벨로우</div>
+                            </div>
+                            <div class="workout workout6">
+                                <div class="workimg workimg6"> </div>
+                                <div class="workText workText6">기타 운동</div>
+                            </div>
+                    </section>
+                    <div class="buttonWrap">
+                        <button class="inputWork">선택하기</button>
+                        <input type="text" name="value" value="1" id="textValue" field="*{value}">
+                    </div>
+                    </form>
+        </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slick').slick({
+            rows: 1,
+            dots: false,
+            Infinity: true,
+            autoplay: false,
+            pauseOnFocus: false, //마우스 포커스 시 슬라이드 멈춤 -default:true
+            pauseOnHover: false, //마우스 호버 시 슬라이드 멈춤 -default:true
+            pauseOnDotsHover: false, //네이게이션버튼 호버 시 슬라이드 멈춤 -default:false
+        });
+        var text = ["스트롱 리프트 - 초급자", "웬들러 5/3/1 - 중급자", "텍사스 메소드 - 고급자"];
+        var work5 = ["바벨로우", "친업", "런지"];
+        var work6 = ["기타 운동", "기타 운동", "풀업"];
+        var url1 =["choice/바벨로우.png","choice/풀업.png","choice/런지.png"];
+        var div5 = document.getElementsByClassName("workout5");
+        var url2 =["choice/랜덤.jpg","choice/랜덤.jpg","choice/풀업.png"];
+        var text2 = ["1","2","3"];
+
+
+        $('.slick').on('afterChange', function (event, slick, currentSlide) {
+            $('.titleText').html(text[currentSlide]);
+            $('.workText5').html(work5[currentSlide]);
+            $('.workText6').html(work6[currentSlide]);
+            $('.workout5').css({"background-image": 'url(' + url1[currentSlide] + ')'});
+            $('.workout6').css({"background-image": 'url(' + url2[currentSlide] + ')'});
+            $('input[name=value]').attr('value',text2[currentSlide]);
+        })
+        });
+</script>
+
+</html>

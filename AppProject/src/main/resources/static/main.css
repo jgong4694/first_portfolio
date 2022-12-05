@@ -1,0 +1,42 @@
+.slick-slide{
+    z-index: 1;
+}
+
+
+button{
+    background-color: rgb(0, 0, 0, 0.8);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    height: 280px;
+    width: 360px;
+    background-image: url(./콜먼.jpg);
+}
+.choice:hover{
+    transition: 0.3s;
+    background-image: url(./콜먼2.jpg);
+    color: black;
+}
+.choice div{
+    display: inline-block;
+    margin-top: 68%;
+    background-color: black;
+    color: white;
+    padding: 2px 2px;
+    border-radius: 8px;
+}
+
+button
+
+button img{
+    z-index: 1;
+    transition: 0.3s;
+    height: 250px;
+    width: 360px;
+
+}
+button img:hover{
+    transition: 0.3s;
+    opacity: 0;
+}

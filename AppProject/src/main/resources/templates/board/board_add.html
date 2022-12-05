@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="board_add.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <button class="back_button"><a th:href="@{/board}"> < 돌아가기</a></button>
+        </div>
+        <div class="add_main">
+            <div class="login_box">
+                <div>
+                    <form action="" th:href="@{/board/boardadd}" th:object="${BoardInput}" method="post">
+                     <div class="id_title" name="id" th:text="${id}">아이디</div>
+                        <div class="title_box">
+                            <input type="text" placeholder="제목을 입력하세요" id="title" name="title" field="*{title}">
+                        </div>
+                        <div class="content_box">
+                            <textarea id="content" cols="26" rows="10" placeholder="내용을 입력하세요." name="content" field="*{content}"></textarea>
+                        </div>
+                        <hr>
+                        <button class="board_add_button">글쓰기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
