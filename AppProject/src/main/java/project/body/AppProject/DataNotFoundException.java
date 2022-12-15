@@ -1,4 +1,4 @@
-package project.body.AppProject.login;
+package project.body.AppProject;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

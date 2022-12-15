@@ -28,8 +28,6 @@ public class MyChoiceController {
 	
 	@GetMapping
 	public String myChoice(Model model, Principal principal) {
-		
-		
 		MyChoice myChoice = myChoiceService.getMyChoice(principal.getName());
 		String RoutineName = routineService.getRoutineName(myChoice.getRoutine());
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -38,6 +36,5 @@ public class MyChoiceController {
 		model.addAttribute("routine",RoutineName);
 		model.addAttribute("MyChoice",myChoice);
 		return "/myChoice";
-		
 	}
 }

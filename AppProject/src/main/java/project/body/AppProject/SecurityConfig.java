@@ -1,4 +1,4 @@
-package project.body.AppProject.login;
+package project.body.AppProject;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

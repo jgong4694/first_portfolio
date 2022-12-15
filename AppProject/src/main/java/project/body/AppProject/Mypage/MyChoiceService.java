@@ -5,6 +5,8 @@ import java.sql.Date;
 import java.util.Calendar;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -26,10 +28,10 @@ public class MyChoiceService {
 	{
 		MyChoice myChoice = new MyChoice();
 		Routine routine = new Routine();
-		Human human = humanService.getHuman(principal.getName());
 		Calendar cal = Calendar.getInstance();
-		routine.setRoutineNum(Integer.parseInt(routineNum)); 
+		Human human = humanService.getHuman(principal.getName());
 		
+		routine.setRoutineNum(Integer.parseInt(routineNum)); 
 		cal.setTime(StartDate);
 		if(routineNum == "1")
 		{
@@ -39,13 +41,22 @@ public class MyChoiceService {
 		{
 			cal.add(Calendar.MONTH, +6);
 		}
-		log.info(cal.getTime().toString());
-		myChoice.setId(human.getId());
-		myChoice.setHuman(human);
-		myChoice.setStartDate(StartDate);
-		myChoice.setRoutine(routine);
-		myChoice.setEndDate(cal.getTime());
-		myChoiceRepository.save(myChoice);
+		if(getMyChoice(human.getId()) == null) {
+			myChoice.setId(human.getId());
+			myChoice.setHuman(human);
+			myChoice.setStartDate(StartDate);
+			myChoice.setRoutine(routine);
+			myChoice.setEndDate(cal.getTime());
+			myChoiceRepository.save(myChoice);
+		}
+		else
+		{
+			MyChoice changeChoice = myChoiceRepository.getById(human.getId());
+			changeChoice.setRoutine(routine);
+			changeChoice.setStartDate(StartDate);
+			changeChoice.setEndDate(cal.getTime());
+			myChoiceRepository.save(changeChoice);
+		}
 	}
 	
 	public MyChoice getMyChoice(String id)
@@ -57,6 +68,15 @@ public class MyChoiceService {
 			return OChoice.get();
 		}
 		return null;
+	}
+	public MyChoice DeleteChoice(String id, Routine routine, Date start, Date end,Integer num)
+	{
+		Optional<MyChoice> OChoice = this.myChoiceRepository.findById(id);
+		MyChoice myChoice = OChoice.get();
+		myChoice.routine.setRoutineNum(num);
+		myChoice.setStartDate(start);
+		myChoice.setEndDate(end);
+		return myChoice;
 	}
 	
 }

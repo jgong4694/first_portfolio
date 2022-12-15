@@ -12,16 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import project.body.AppProject.Mypage.MyChoice;
 import project.body.AppProject.Mypage.MyChoiceService;
+import project.body.AppProject.choice.RoutineService;
 
 @Slf4j
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("/choice")
 public class ChoiceController {
-	
-	@Autowired
 	private final MyChoiceService myChoiceService;
+	
+	private final RoutineService routineService;
 	
 	@GetMapping("/choice")
 	public String choice() {
@@ -40,11 +42,10 @@ public class ChoiceController {
 		model.addAttribute("workDate",date);
 		return "choice/endChoice";
 	}	
-	
-//	@PostMapping("/endChoice/complete")
-//	public String complete(Principal principal, Date StartDate, String routineNum) throws Exception
-//	{
-//		myChoiceService.create(principal, StartDate, routineNum);
-//		return "redirect:/";
-//	}
+	@PostMapping("/endChoice/complete")
+	public String complete(Principal principal, Date StartDate, String routineNum) throws Exception
+	{
+		myChoiceService.create(principal, StartDate, routineNum);
+		return "redirect:/";
+	}
 }

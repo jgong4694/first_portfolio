@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import project.body.AppProject.login.DataNotFoundException;
+import project.body.AppProject.DataNotFoundException;
 import project.body.AppProject.login.Human;
 
 
