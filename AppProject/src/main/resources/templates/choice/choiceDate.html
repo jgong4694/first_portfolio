@@ -13,27 +13,28 @@
     <link rel="stylesheet" href="/base.css">
     <link rel="stylesheet" href="/choice/choiceDate.css">
     <title>Document</title>
-</head>
+</head>	
 
 <body>
     <div class="wrap">
         <div>
-            <button class="back_button"><a href="../">
-                    < 돌아가기</a> </button> </div> <form action="">
+            <button class="back_button"><a th:href="@{/choice}">
+                    < 돌아가기</a> </button> </div> 
+                    <form action="endchoice" th:action="@{endChoice}" method="post">
                         <section class="choiceImage">
-                            <div class="imgFile" th:id="'img' + *{value}"></div>
+                            <div class="imgFile" th:id="'img' + ${value}"></div>
+                            <div class="imageText" th:id="'name' + ${value}"></div>
                             <div class="workBox">
-                                <div class="workText" th:id="'timeText' + *{value}">분할법이야기</div>
+                                <div class="workText" th:id="'workText' + *{value}"></div>
                             </div>
-                            <div class="imageText" th:id="'name' + *{value}">분할이름</div>
                         </section>
                         <section class="dateChoice">
                             <div class="pickerBox">
                                 <div class="textpicker">시작 날짜 선택</div>
-                                <input id="datepicker" name="Date"></div>
+                                <input id="datepicker" name="date"></div>
         </section>
         <div class="inputDateBox">
-            <button class="inputDate">선택 완료</button>
+            <button class="inputDate"  name="value" th:value="*{value}">선택 완료</button>
         </div>
         </form>
     </div>
@@ -53,6 +54,8 @@
             monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
             dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
             dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+            ,minDate: "0D" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+            ,maxDate: "15D" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)        
         });
         $('#datepicker').datepicker('setDate', 'today');
     })

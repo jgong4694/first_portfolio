@@ -12,7 +12,6 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class HumanService {
 	
-	@Autowired
 	private final HumanRepository humanRepository;
 	private final PasswordEncoder encoder;
 	

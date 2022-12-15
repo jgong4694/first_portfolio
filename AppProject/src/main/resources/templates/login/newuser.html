@@ -67,11 +67,14 @@ function valuetest() {
         {
             document.getElementById("eid").style.cssText = 'opacity: 1;'
             check[0] = 1;
+            document.getElementById("id").style.cssText = 'border: 1px solid red; border-radius: 4px;'
         }
         else
         {
             document.getElementById("eid").style.cssText = 'opacity: 0;'
             check[0] = 0;
+            document.getElementById("id").style.cssText = 'border: 1px solid white;'
+            document.getElementById("id").style.cssText = 'border-bottom: 1px solid rgb(0,86,145);'
         }
 })
 
@@ -82,11 +85,14 @@ function valuetest() {
         {
             document.getElementById("epw1").style.cssText = 'opacity: 1;'
             check[1] = 1;
+            document.getElementById("pwd").style.cssText = 'border: 1px solid red; border-radius: 4px;'
         }
         if(pwdv1.length > "asdf".length)
         {
             document.getElementById("epw1").style.cssText = 'opacity: 0;'
             check[1] = 0;
+            document.getElementById("pwd").style.cssText = 'border: 1px solid white;'
+            document.getElementById("pwd").style.cssText = 'border-bottom: 1px solid rgb(0,86,145); '
         }
 })
 
@@ -98,11 +104,14 @@ inputclass[2].addEventListener("focusout", function (){
         {
             document.getElementById("epw2").style.cssText = 'opacity: 1;'
             check[2] = 1;
+            document.getElementById("pwd_check").style.cssText = 'border: 1px solid red; border-radius: 4px; '
         }
         else
         {
             document.getElementById("epw2").style.cssText = 'opacity: 0;'
             check[2] = 0;
+            document.getElementById("pwd_check").style.cssText = 'border: 1px solid white;'
+            document.getElementById("pwd_check").style.cssText = 'border-bottom: 1px solid rgb(0,86,145);'
         }
 })
 
@@ -113,11 +122,13 @@ inputclass[3].addEventListener("focusout", function (){
         {
             document.getElementById("ev").style.cssText = 'opacity: 1;'
             check[3] = 1;
+            document.getElementById("email").style.cssText = 'border: 1px solid red; border-radius: 4px;'
         }
         else
         {
             document.getElementById("ev").style.cssText = 'opacity: 0;'
             check[3] = 0;
+            document.getElementById("email").style.cssText = 'border: 1px solid white; border-bottom: 1px solid rgb(0,86,145);'
         }
 })
 }

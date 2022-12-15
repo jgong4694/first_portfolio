@@ -52,6 +52,7 @@
     display:inline-block;
     padding: 3px 10px 3px 10px;
     margin-top: 10px;
+    font-size: 20px;
 }
 .dateChoice{
     width: 100%;
@@ -79,6 +80,7 @@
     border: 3px solid rgb(0,86,145);
 }
 .textpicker{
+	padding-top: 9%;
     margin-left: 6%;
 }
 
@@ -113,3 +115,38 @@
 #img3{
 	background-image: url(../texas.jpg)
 }
+
+#name1::after{
+	content : "스트롱 리프트";
+}
+#name2::after{
+	content : "웬들러 5/3/1";
+}
+#name3::after{
+	content : "텍사스 메소드";
+}
+.workText{
+	white-space:normal;
+}
+
+#workText1::after{
+	content : "간단하고 심플한 5x5 스트렝스 훈련 - 12주 프로그램";
+}
+#workText2::after{
+	content : "유명 훈련 프로그램 저술가 '짐 웬들러'의 5/3/1 스트렝스 피라미드 훈련 - 24주 프로그램";
+	
+}
+
+#workText3::after{
+	content : "유명 트레이닝 코치 '마크 리피토'의 하드 스트렝스 트레이닝 - 24주 프로그램";
+}
+
+.ui-datepicker-week-end{
+	
+	color:blue;
+}
+
+.ui-datepicker-week-end:first-child{
+	color:red;
+}
+

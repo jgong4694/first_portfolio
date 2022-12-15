@@ -29,10 +29,6 @@ public class MainController {
 		log.info("로그아웃 진행!");
 		return "main";
 	}
-	@GetMapping("/mypage")
-	public String myPage() {
-		return "/myPage";
-	}
 	@GetMapping("/choice")
 	public String choice() {
 		return "choice/Startchoice";

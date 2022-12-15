@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/choice/main.css">
+    <script src="/choice/main.js"></script>
+    <script src="/choice/ko.js"></script>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="/choice/choice.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
@@ -14,7 +18,7 @@
 <body>
     <div class="wrap">
         <div class="back_button">
-            <a href="">
+            <a th:href="@{/}">
                 < 돌아가기</a> </div> 
                 <form action="choiceDate" th:action="@{choice/choiceDate}">
                     <section class="choiceMain">
@@ -37,7 +41,8 @@
                     </section>
                     <hr>
                     <section class="content">
-                        <div>
+                    <div>
+                        <div class="topWork">
                             <div class="workout workout1">
                                 <div class="workimg workimg1"></div>
                                 <div class="workText workText1">벤치프레스</div>
@@ -50,6 +55,8 @@
                                 <div class="workimg workimg3"></div>
                                 <div class="workText workText3">데드리프트</div>
                             </div>
+                        </div>
+                    	<div> 
                             <div class="workout workout4">
                                 <div class="workimg workimg4"></div>
                                 <div class="workText workText4">오버헤드프레스</div>
@@ -63,10 +70,11 @@
                                 <div class="workimg workimg6"> </div>
                                 <div class="workText workText6">기타 운동</div>
                             </div>
+                    	</div>
                     </section>
                     <div class="buttonWrap">
                         <button class="inputWork">선택하기</button>
-                        <input type="text" name="value" value="1" id="textValue" field="*{value}">
+                        <input type="text" name="value" value="1" id="textValue">
                     </div>
                     </form>
         </div>

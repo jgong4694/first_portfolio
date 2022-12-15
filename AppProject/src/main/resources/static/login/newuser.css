@@ -66,31 +66,32 @@
 
 #id{
     height: 30px;
-    border: none;
+    border : 1px solid white;
     border-bottom: 1px solid rgb(0,86,145);
+    
 }
 #pwd{
     height: 30px;
-    border: none;
+    border : 1px solid white;
     border-bottom: 1px solid rgb(0,86,145); 
 }
 
-
 #pwd_check{
     height: 30px;
-    border: none;
+    border : 1px solid white;
     border-bottom: 1px solid rgb(0,86,145); 
+
 }
 
 #email{
     height: 30px;
-    border: none;
+    border : 1px solid white;
     border-bottom: 1px solid rgb(0,86,145); 
 }
 
 .newuser_button{
     width: 70px;
-    height: 30px;
+    height: 30px;	
     margin-top: 13px;
     background-color: white;
     border: none;
