@@ -1,0 +1,113 @@
+.wrap
+{
+    overflow-y: scroll;
+}
+.wrap::-webkit-scrollbar{
+    opacity: 0;
+}
+#calendar{
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.fc-view-harnes{
+    
+}
+.fc-day-sun{
+    color: red;
+}
+
+
+.fc-day-sat{
+    color: blue;
+}
+
+.fc-daygrid-day-events{
+    bottom: 0;
+    font-size: 14px;
+}
+.fc-event-time{
+    font-size: 0;
+}
+.fc-scroller-liquid-absolute{
+
+}
+.fc-daygrid-day-number{
+    font-size: 12px;
+}
+.fc-day{
+}
+.bless{
+    margin-top: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    
+}
+.endChoice{
+    text-align: center;
+    height: 80px;
+}
+
+.endChoice>button{
+    background-color:rgb(0,86,145);
+    display: inline-block;
+    padding: 15px 20px 15px 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: white;
+    transition: 0.15s;
+}
+.endChoice>button:hover{
+    padding: 17px 20px 17px 20px;
+    font-size: 18px;
+    background-color: white;
+    color: rgb(0,86,145);
+}
+.fc-event-title{
+    color: black;
+}
+#RoutineNum1::after{
+	content: "스트롱리프트";
+	
+}
+#RoutineNum2::after{
+	content: "웬들러 5/3/1";
+}
+#RoutineNum3::after{
+	content: "텍사스 메소드";
+}
+
+.rutineSet{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.rutineContent{
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	font-size: 20px;
+	width: 180px;
+	display:inline-block;
+	font-weight: bold;
+	background-color: black;
+	color:white;
+	border-radius: 8px;
+	margin-top: 5%;	
+}
+
+.rutienDate{
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+}
+input{
+	size:0;
+	width: 0;
+	border:none;
+}
