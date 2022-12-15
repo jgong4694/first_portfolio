@@ -34,7 +34,7 @@ public class MyChoiceController {
 		model.addAttribute("start",format.format(myChoice.getStartDate()));
 		model.addAttribute("end",format.format(myChoice.getEndDate()));
 		model.addAttribute("routine",RoutineName);
-		model.addAttribute("MyChoice",myChoice);
+		model.addAttribute("MyChoice",myChoice); 
 		return "/myChoice";
 	}
 }
